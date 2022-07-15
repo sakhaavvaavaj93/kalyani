@@ -18,6 +18,10 @@
             "description": "Put Bot Token Of Your Bot",
             "required": true
         },
+        "START_IMG": {
+            "description":"image that when you start bot",
+            "value":"" 
+        }
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
             "required": true
