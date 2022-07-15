@@ -32,8 +32,7 @@ async def _human_time_duration(seconds):
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/d0b2899c25498fb52d0c8.jpg",
+    await message.reply_photo({START_IMG},
         caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
 **""",
     
@@ -42,7 +41,7 @@ async def start_(client: Client, message: Message):
     
 @Client.on_message(commandpro(["start", "alive"]) & filters.private & ~filters.edited)
 async def start(client: Client, message: Message):
-    await message.reply_photo({START_IMG}
+    await message.reply_photo({START_IMG},
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
