@@ -5,7 +5,7 @@ from modules.helpers.filters import command
 from modules.helpers.command import commandpro
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
+from modules.config import START_IMG
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -42,8 +42,7 @@ async def start_(client: Client, message: Message):
     
 @Client.on_message(commandpro(["start", "alive"]) & filters.private & ~filters.edited)
 async def start(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/fe60111b5bcbeffbb2b30.jpg",
+    await message.reply_photo({START_IMG}
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
