@@ -1,4 +1,4 @@
-# black cat // @The_cat_lover0
+
 
 import os
 import aiofiles
@@ -57,14 +57,6 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-# Change image size
-def changeImageSize(maxWidth, maxHeight, image):
-    widthRatio = maxWidth / image.size[0]
-    heightRatio = maxHeight / image.size[1]
-    newWidth = int(widthRatio * image.size[0])
-    newHeight = int(heightRatio * image.size[1])
-    return image.resize((newWidth, newHeight))
-
 @Client.on_message(
     commandpro(["/play", "/yt", "/ytp", "play", "yt", "ytp", "@", "#"])
     & filters.group
@@ -76,7 +68,7 @@ async def play(_, message: Message):
     global que
     global useer
     
-    lel = await message.reply("**🔎 **")
+    lel = await message.reply("**🔎 searching.... pls wait **")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -280,7 +272,7 @@ async def play(_, message: Message):
     return await lel.delete()
     
     
-@Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
+@Client.on_message(commandpro(["/pause", "pause", /ps"]) & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
@@ -288,13 +280,13 @@ async def pause(_, message: Message):
     
 
 
-@Client.on_message(commandpro(["/resume", "resume"]) & other_filters)
+@Client.on_message(commandpro(["/resume", "resume", "/rs"]) & other_filters)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     
-@Client.on_message(commandpro(["/skip", "/next", "skip", "next"]) & other_filters)
+@Client.on_message(commandpro(["/skip", "/next", "skip", "next", /sp]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
@@ -331,7 +323,7 @@ async def stop(_, message: Message):
 
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
     
-@Client.on_message(commandpro(["reload", "refresh"]))
+@Client.on_message(commandpro(["/reload", "/restart"]))
 @errors
 @authorized_users_only
 async def admincache(client, message: Message):
