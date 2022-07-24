@@ -270,7 +270,7 @@ async def play(_, message: Message):
     return await lel.delete()
     
     
-@Client.on_message(commandpro(["/pause", "pause", "/ps"]) & other_filters)
+@Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
@@ -278,13 +278,13 @@ async def pause(_, message: Message):
     
 
 
-@Client.on_message(commandpro(["/resume", "resume", "/rs"]) & other_filters)
+@Client.on_message(commandpro(["/resume", "resume"]) & other_filters)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     
-@Client.on_message(commandpro(["/skip", "/next", "skip", "next", "/sp"]) & other_filters)
+@Client.on_message(commandpro(["/skip", "/next", "skip", "next"]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
@@ -321,7 +321,7 @@ async def stop(_, message: Message):
 
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
     
-@Client.on_message(commandpro(["/reload", "/restart"]))
+@Client.on_message(commandpro(["/restart", "restart"]))
 @errors
 @authorized_users_only
 async def admincache(client, message: Message):
