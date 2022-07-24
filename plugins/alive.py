@@ -41,7 +41,6 @@ Nb : Bot and Userbot are locked by owner ,
      who wish to add this bot to your group,
      then , contact @CRUAL_MIND』
 **"""
-    )
 reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -50,6 +49,7 @@ reply_markup=InlineKeyboardMarkup(
                 ]
             ]
         ),
+     )
     
     
 @Client.on_message(commandpro(["/start", "/alive", "blackcat"]) & filters.group & ~filters.edited)
