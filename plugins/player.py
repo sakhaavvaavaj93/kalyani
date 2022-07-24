@@ -1,5 +1,3 @@
-
-
 import os
 import aiofiles
 import aiohttp
@@ -286,7 +284,7 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     
-@Client.on_message(commandpro(["/skip", "/next", "skip", "next", /sp]) & other_filters)
+@Client.on_message(commandpro(["/skip", "/next", "skip", "next", "/sp"]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
