@@ -272,7 +272,7 @@ async def play(_, message: Message):
     return await lel.delete()
     
     
-@Client.on_message(commandpro(["/pause", "pause", /ps"]) & other_filters)
+@Client.on_message(commandpro(["/pause", "pause", "/ps"]) & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
