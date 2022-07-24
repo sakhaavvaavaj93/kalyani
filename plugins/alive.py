@@ -33,14 +33,14 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/d0b2899c25498fb52d0c8.jpg",
-        caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
+        photo=f"https://telegra.ph/file/82cea8cd9e2cfa08b8f3e.jpg",
+        caption=f"""**
 『It's a Music bot without lag and struck .
   It's a official Music bot of @kk_kovilakam 
 Nb : Bot and Userbot are locked by owner ,
      who wish to add this bot to your group,
      then , contact @CRUAL_MIND』
-**"""
+**""",
 reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -55,12 +55,13 @@ reply_markup=InlineKeyboardMarkup(
 @Client.on_message(commandpro(["/start", "/alive", "blackcat"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/d0b2899c25498fb52d0c8.jpg",
+        photo=f"https://telegra.ph/file/82cea8cd9e2cfa08b8f3e.jpg",
+        caption=f"""**ഇപ്പോഴും ജീവനോടെ ഉണ്ട് . ചത്തിട്ടില്ല**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/Kerala_Cousinsofficial")
+                        "GrouP", url=f"https://t.me/Kerala_Cousinsofficial")
                 ]
             ]
         ),
