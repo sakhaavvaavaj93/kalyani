@@ -8,19 +8,23 @@
     "env": {
         "API_ID": {
             "description": "Your App ID",
-            "required": true
+            "required": true,
+            "value": ""
         },
         "API_HASH": {
             "description": "Your App Hash",
-            "required": true
+            "required": true,
+            "value": ""
         },
         "BOT_TOKEN": {
             "description": "Put Bot Token Of Your Bot",
-            "required": true
+            "required": true,
+            "value": ""
         },
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
-            "required": true
+            "required": true,
+            "value": ""
         }
     },
     "buildpacks": [
