@@ -305,21 +305,16 @@ async def playfrom(client, m: Message):
                     )
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     await m.reply_to_message.delete()
-                 #   await m.reply_photo(
-                       # photo="https://telegra.ph/file/18d25616d9883400af112.png",
-                       # caption=f"""
-#**▶ Mulai Memutar Lagu Dari {chat}
-#🏷️ Judul: [{songname}]
-#💡 Status: Playing
-#🎧 Atas Permintaan: {m.from_user.mention}**
-#""",
- #                   )
- #           await hmm.delete()
- #           await m.reply(
- #               f"âž• Menambahkan {lmt} Lagu Ke Dalam Antrian\nâ€¢ Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
- #           )
- #       except Exception as e:
- #           await hmm.edit(f"**ERROR** \n`{e}`")
+                    await m.reply_text(
+                        text=f"""**Playing From Group / Channel**,
+             """,
+                    )
+  #          await hmm.delete()
+            await m.reply(
+                f"âž• Menambahkan {lmt} Lagu Ke Dalam Antrian\nâ€¢ Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
+            )
+        except Exception as e:
+            await hmm.edit(f"**ERROR** \n`{e}`")
 
                    
 @Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
