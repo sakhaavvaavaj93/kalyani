@@ -268,8 +268,39 @@ async def play(_, message: Message):
                 stream_type=StreamType().local_stream,
             )
     return await lel.delete()
-    
-    
+
+@Client.on_message(commandpro(["/playfrom", "pf"]) & other_filters)
+@errors
+@authorized_users_only
+async def playfrom(client, m: Message):
+    chat_id = m.chat.id
+        args = m.text.split(maxsplit=1)[1]
+        if ";" in args:
+            chat = args.split(";")[0]
+            limit = int(args.split(";")[1])
+        else:
+            chat = args
+            limit = 30
+            lmt = 29    
+        try:
+            async for x in bot.search_messages(chat, limit=limit, filter="audio"):
+                location = await x.download()
+                if x.audio.title:
+                    songname = x.audio.title[:30] + "..."
+                else:
+                    songname = x.audio.file_name[:30] + "..."
+                link = x.link
+                if chat_id in QUEUE:
+                    add_to_queue(chat_id, songname, location, link, "Audio", 0)
+                else:
+                    await call_py.join_group_call(
+                        chat_id,
+                        AudioPiped(location),
+                        stream_type=StreamType().pulse_stream,
+                    )
+                    add_to_queue(chat_id, songname, location, link, "Audio", 0)
+                    await m.reply_to_message.delete()
+                   
 @Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
 @errors
 @authorized_users_only
