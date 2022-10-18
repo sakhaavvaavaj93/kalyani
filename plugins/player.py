@@ -269,11 +269,14 @@ async def play(_, message: Message):
             )
     return await lel.delete()
 
-@Client.on_message(commandpro(["/playfrom", "pf"]) & other_filters)
-@errors
-@authorized_users_only
+@Client.on_message(filters.command(["playfrom", "pf"]))
 async def playfrom(client, m: Message):
     chat_id = m.chat.id
+    if len(m.command) < 2:
+        await m.reply(
+            f"**SYNTAX:** \n\n`{HNDLR}playfrom [chat_id/username]` \n`{HNDLR}playfrom [chat_id/username]`"
+        )
+    else:
         args = m.text.split(maxsplit=1)[1]
         if ";" in args:
             chat = args.split(";")[0]
@@ -281,7 +284,9 @@ async def playfrom(client, m: Message):
         else:
             chat = args
             limit = 30
-            lmt = 29    
+            lmt = 29
+        await m.delete()
+    #    hmm = await m.reply(f"**✧ Mengambil {limit} Lagu Acak Dari {chat}**")
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
                 location = await x.download()
@@ -300,6 +305,22 @@ async def playfrom(client, m: Message):
                     )
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     await m.reply_to_message.delete()
+                 #   await m.reply_photo(
+                       # photo="https://telegra.ph/file/18d25616d9883400af112.png",
+                       # caption=f"""
+#**▶ Mulai Memutar Lagu Dari {chat}
+#🏷️ Judul: [{songname}]
+#💡 Status: Playing
+#🎧 Atas Permintaan: {m.from_user.mention}**
+#""",
+ #                   )
+ #           await hmm.delete()
+ #           await m.reply(
+ #               f"âž• Menambahkan {lmt} Lagu Ke Dalam Antrian\nâ€¢ Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
+ #           )
+ #       except Exception as e:
+ #           await hmm.edit(f"**ERROR** \n`{e}`")
+
                    
 @Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
 @errors
