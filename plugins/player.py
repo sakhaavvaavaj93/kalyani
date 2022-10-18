@@ -269,7 +269,7 @@ async def play(_, message: Message):
             )
     return await lel.delete()
 
-@Client.on_message(filters.command(["playfrom", "pf"]))
+@Client.on_message(commandpro(["/playfrom", "pf"]) & other_filters)
 async def playfrom(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
@@ -319,7 +319,6 @@ async def playfrom(client, m: Message):
                    
 @Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
 @errors
-@authorized_users_only
 async def pause(_, message: Message):
     await clientbot.pytgcalls.pause_stream(message.chat.id)
     
@@ -327,13 +326,11 @@ async def pause(_, message: Message):
 
 @Client.on_message(commandpro(["/resume", "resume"]) & other_filters)
 @errors
-@authorized_users_only
 async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     
 @Client.on_message(commandpro(["/skip", "/next", "skip", "next"]) & other_filters)
 @errors
-@authorized_users_only
 async def skip(_, message: Message):
     global que
     ACTV_CALLS = []
@@ -359,7 +356,7 @@ async def skip(_, message: Message):
 
 @Client.on_message(commandpro(["/end", "end", "/stop", "stop", "x"]) & other_filters)
 @errors
-@authorized_users_only
+
 async def stop(_, message: Message):
     try:
         clientbot.queues.clear(message.chat.id)
