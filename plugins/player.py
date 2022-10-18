@@ -268,54 +268,6 @@ async def play(_, message: Message):
                 stream_type=StreamType().local_stream,
             )
     return await lel.delete()
-
-@Client.on_message(commandpro(["/playfrom", "pf"]) & other_filters)
-async def playfrom(client, m: Message):
-    chat_id = m.chat.id
-    if len(m.command) < 2:
-        await m.reply(
-            f"**SYNTAX:** \n\n`{HNDLR}playfrom [chat_id/username]` \n`{HNDLR}playfrom [chat_id/username]`"
-        )
-    else:
-        args = m.text.split(maxsplit=1)[1]
-        if ";" in args:
-            chat = args.split(";")[0]
-            limit = int(args.split(";")[1])
-        else:
-            chat = args
-            limit = 150
-            lmt = 125
-        await m.delete()
-        hmm = await m.reply(f"**✧ fetch {limit} Random Song From {chat}**")
-        try:
-            async for x in bot.search_messages(chat, limit=limit, filter="audio"):
-                location = await x.download()
-                if x.audio.title:
-                    songname = x.audio.title[:30] + "..."
-                else:
-                    songname = x.audio.file_name[:30] + "..."
-                link = x.link
-                if chat_id in QUEUE:
-                    add_to_queue(chat_id, songname, location, link, "Audio", 0)
-                else:
-                    await call_py.join_group_call(
-                        chat_id,
-                        AudioPiped(location),
-                        stream_type=StreamType().pulse_stream,
-                    )
-                    add_to_queue(chat_id, songname, location, link, "Audio", 0)
-                    await m.reply_to_message.delete()
-                    await m.reply_text(
-                        text=f"""**Playing From Group / Channel**,
-             """,
-                    )
-            await hmm.delete()
-            await m.reply(
-                f"âž• Menambahkan {lmt} Lagu Ke Dalam Antrian\nâ€¢ Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
-            )
-        except Exception as e:
-            await hmm.edit(f"**ERROR** \n`{e}`")
-
                    
 @Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
 @errors
