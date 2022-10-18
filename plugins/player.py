@@ -283,10 +283,10 @@ async def playfrom(client, m: Message):
             limit = int(args.split(";")[1])
         else:
             chat = args
-            limit = 30
-            lmt = 29
+            limit = 150
+            lmt = 125
         await m.delete()
-    #    hmm = await m.reply(f"**✧ Mengambil {limit} Lagu Acak Dari {chat}**")
+        hmm = await m.reply(f"**✧ fetch {limit} Random Song From {chat}**")
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
                 location = await x.download()
@@ -309,7 +309,7 @@ async def playfrom(client, m: Message):
                         text=f"""**Playing From Group / Channel**,
              """,
                     )
-  #          await hmm.delete()
+            await hmm.delete()
             await m.reply(
                 f"âž• Menambahkan {lmt} Lagu Ke Dalam Antrian\nâ€¢ Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
             )
