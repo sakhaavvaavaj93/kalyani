@@ -9,22 +9,21 @@
         "API_ID": {
             "description": "Your App ID",
             "required": true,
-            "value": ""
-        },
+            "value": "27103643"
         "API_HASH": {
             "description": "Your App Hash",
             "required": true,
-            "value": ""
+            "value": "f0228dc23546b35de94efa2b47661949"
         },
         "BOT_TOKEN": {
             "description": "Put Bot Token Of Your Bot",
             "required": true,
-            "value": ""
+            "value": "5624486945:AAEESQnyMOn6xMeJ5zeslklhB74vAlBEpi4"
         },
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
             "required": true,
-            "value": ""
+            "value": "AQCTJOqtbSSsURI6edACxqShAMHPAoweYrPw2_bVX7__EI3vhKLO7QuDpgljmVXd7DMXkHUb_hecPtwbs6dTa-Y-c5yxwJywHJILyQiFHDb9SgpjplZ5ZCkU0cBYrUlX7BWm25RleziQ_G7NPUXbfa7Gb2x97Nq_JrVnh4yXfTf4nrXg5dE4uvQblYmEVZrscMU1RFVyr9__GYrVOyIh9NVkJGomzKBkhJJU8O_AL6B2Wti6C4JskzIw_c4gZ3fytugUr94NSPIKIp6tzpP4HLiZuRmPtM9aG_A9piDJCDPQ0wnwVezisqIbuT6tD1C_3usQh9woX5oPHG8q3BaG3ICNAAAAAVIVbuoA"
         }
     },
     "buildpacks": [
