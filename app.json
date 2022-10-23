@@ -10,6 +10,7 @@
             "description": "Your App ID",
             "required": true,
             "value": "27103643"
+        },
         "API_HASH": {
             "description": "Your App Hash",
             "required": true,
