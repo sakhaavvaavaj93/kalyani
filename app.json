@@ -19,13 +19,12 @@
         "BOT_TOKEN": {
             "description": "Put Bot Token Of Your Bot",
             "required": true,
-            "value": "5624486945:AAEESQnyMOn6xMeJ5zeslklhB74vAlBEpi4"
+            "value": "5749790297:AAHlz7W8-3dA-zDf81KXQGeaokGpu9OWPag"
         },
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
             "required": true,
-            "value": "AQCTJOqtbSSsURI6edACxqShAMHPAoweYrPw2_bVX7__EI3vhKLO7QuDpgljmVXd7DMXkHUb_hecPtwbs6dTa-Y-c5yxwJywHJILyQiFHDb9SgpjplZ5ZCkU0cBYrUlX7BWm25RleziQ_G7NPUXbfa7Gb2x97Nq_JrVnh4yXfTf4nrXg5dE4uvQblYmEVZrscMU1RFVyr9__GYrVOyIh9NVkJGomzKBkhJJU8O_AL6B2Wti6C4JskzIw_c4gZ3fytugUr94NSPIKIp6tzpP4HLiZuRmPtM9aG_A9piDJCDPQ0wnwVezisqIbuT6tD1C_3usQh9woX5oPHG8q3BaG3ICNAAAAAVIVbuoA"
-        }
+            "value": "AQBtPhRJU9d--DtGo14-q8YjNY1sAAKK0tT2lLBvxf0KxTdKFM_xrFGBxGZVpFQ4RI3Qg576yAdqCbJwPyz4T4QIKVYJVHycDj_T9eWjT-0pdJn87uM5G_xCkKWdirhHpmDuqyn8fQ2zD4Mgwwx04qR0wqfMk51P9s7FqrWOqyJMhTj0pnhSCEnC_F4hkVY3MNtzES5jRxQQvZWyLkwlD9C4n7cXqSa8R23xrkawQ64sLLw5d7gxhrkWkUSfj71PmcyCvnpR8ryxzLe6D2Z9SPHjYbDTPGYPXM-hrqUdt20g1C-mCv5mqee_fRZ6ZxLAFuGmkgqP9gduhQiWdPaNf_beAAAAAVIVbuoA"}
     },
     "buildpacks": [
     {
