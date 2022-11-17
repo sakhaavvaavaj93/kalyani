@@ -33,34 +33,32 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/ce63cc853dc7f605d2f36.jpg",
+        photo=f"https://telegra.ph/file/2356f780216eed5085b4c.jpg",
         caption=f"""**
 『It's a Music bot without lag and struck .
-  It's a official Music bot of Team DC 
+  It's a official Music bot 
 Nb : Bot and Userbot are locked by owner ,
      who wish to add this bot to your group,
-     then , contact @KRISHNA_THULSI』
+     then , contact owner』
 **""",
 reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "『Stenzle』", url=f"https://t.me/Stenzle_MariaGbot?startgroup=true"),
+                        "『Add me to your Group』", url=f"https://t.me/Galvano_X_Meterbot?startgroup=true"),                                         
                     InlineKeyboardButton(
-                        "『RUDRA_BHADRA』", url=f"https://t.me/Rudra_BhadraGbot?startgroup=true"),
-                    InlineKeyboardButton(
-                        "『TEAM DC』", url=f"https://t.me/KRISHNA_THULSI") 
+                        "『assistant』", url=f"https://t.me/Galveno_Meter") 
                 ]
             ]
         ),
      )
     
     
-@Client.on_message(commandpro(["/start", "/alive", "blackcat"]) & filters.group & ~filters.edited)
+@Client.on_message(commandpro(["/start", "/alive", "alive"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/0a553449a9518e8adfa70.jpg",
-        caption=f"""**𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 𝐌𝐔𝐒𝐈𝐂 Bot of TEAM DC**,
+        photo=f"https://telegra.ph/file/b96ffd942f69608813ac2.jpg",
+        caption=f"""**𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 𝐌𝐔𝐒𝐈𝐂 Bot**,
         it's A 💯% LAG AND STRUCK FREE MUSIC BOT , 
         IT KEEP CLEAN YOUR CHAT WHEN IT WORK ON YOUR CHAT,
         3hrs Unlimited Playing without Lag       
@@ -69,13 +67,10 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "『Stenzle』", url=f"https://t.me/Stenzle_MariaGbot?startgroup=true"),
+                        "『Add me to your Group』", url=f"https://t.me/Galvano_X_Meterbot?startgroup=true"),                                         
                     InlineKeyboardButton(
-                        "『RUDRA_BHADRA』", url=f"https://t.me/Rudra_BhadraGbot?startgroup=true"),
-                    InlineKeyboardButton(
-                        "『TEAM DC』", url=f"https://t.me/KRISHNA_THULSI")
+                        "『assistant』", url=f"https://t.me/Galveno_Meter") 
                 ]
             ]
         ),
-    )
-
+     )
