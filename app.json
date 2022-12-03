@@ -9,17 +9,17 @@
         "API_ID": {
             "description": "Your App ID",
             "required": true,
-            "value": "27103643"
+            "value": "24547069"
         },
         "API_HASH": {
             "description": "Your App Hash",
             "required": true,
-            "value": "f0228dc23546b35de94efa2b47661949"
+            "value": "35b8c016ea0cb8b7f88cdd1626e30123"
         },
         "BOT_TOKEN": {
             "description": "Put Bot Token Of Your Bot",
             "required": true,
-            "value": "5749790297:AAHlz7W8-3dA-zDf81KXQGeaokGpu9OWPag"
+            "value": "5624694570:AAGDei_31TNE7ssp-x5F-6cJ5q3aApsnWSs"
         },
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
