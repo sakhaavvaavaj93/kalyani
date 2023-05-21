@@ -1,4 +1,3 @@
-admins = ()
 API_ID = int(getenv("API_ID", "1755145"))
 API_HASH = getenv("API_HASH", "f1933c5fb9c5c7b4fc1240ae36c809df")
 BOT_TOKEN = getenv("BOT_TOKEN", "5769340352:AAFZ6VqMeydqz_tuNHf9ykdOn4ap5IX2NQE")
