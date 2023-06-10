@@ -17,4 +17,4 @@ youtube-search
 youtube-search-python
 pyrogram==1.4.16
 env
-youtube-dlc==v2020.11.11-3+
+youtube-dl
