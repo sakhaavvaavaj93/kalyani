@@ -1,1 +1,1 @@
-gunicornapp:app & python3 bot.py
+gunicornapp:app & python3 Dockerfile.py
