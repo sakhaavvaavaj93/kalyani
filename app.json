@@ -9,22 +9,22 @@
         "API_ID": {
             "description": "Your App ID",
             "required": true,
-            "value": "24547069"
+            "value": "1701859"
         },
         "API_HASH": {
             "description": "Your App Hash",
             "required": true,
-            "value": "35b8c016ea0cb8b7f88cdd1626e30123"
+            "value": "ebd582392a6d32290c7155925bee6d32"
         },
         "BOT_TOKEN": {
             "description": "Put Bot Token Of Your Bot",
             "required": true,
-            "value": "5624694570:AAGDei_31TNE7ssp-x5F-6cJ5q3aApsnWSs"
+            "value": "6096333459:AAHqBLMM0GVKhcJ5WA6BAywL8ILvYcwy_PY"
         },
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
             "required": true,
-            "value": "AQBtPhRJU9d--DtGo14-q8YjNY1sAAKK0tT2lLBvxf0KxTdKFM_xrFGBxGZVpFQ4RI3Qg576yAdqCbJwPyz4T4QIKVYJVHycDj_T9eWjT-0pdJn87uM5G_xCkKWdirhHpmDuqyn8fQ2zD4Mgwwx04qR0wqfMk51P9s7FqrWOqyJMhTj0pnhSCEnC_F4hkVY3MNtzES5jRxQQvZWyLkwlD9C4n7cXqSa8R23xrkawQ64sLLw5d7gxhrkWkUSfj71PmcyCvnpR8ryxzLe6D2Z9SPHjYbDTPGYPXM-hrqUdt20g1C-mCv5mqee_fRZ6ZxLAFuGmkgqP9gduhQiWdPaNf_beAAAAAVIVbuoA"}
+            "value": "BQC3EeilsfEVo_WvO7XPwGeEZ0EZXk602f7XgKAnOUxqwEx-NASLkot__UPt48xXf0x12Fs9F1RvNGe3PfL7xcGzl3rjasfcyuLjaZlIkf2rURvY3QKrlNOaC5msYkw3sYLrG60HaPdZRu61XAzBR1K0WPxnAHt0fPjibPG071Wv_WuU0fq3g2v7cxY57aDUNXnZ_KyLSr3ZTpZg4mcSmOQKyE2W7LyYxTRnqr8n7CB62fMLp4cZublwLA5peazu_kWkxjECz63UdBOrKxATV3T9A7cKd-w135k_G5-zQX0DYtohreeFrt68_PsMl2Syi-VZIxe3sPx4VLV2t2waMSNkAAAAAW4qInAA"}
     },
     "buildpacks": [
     {
