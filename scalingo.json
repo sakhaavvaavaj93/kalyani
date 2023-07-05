@@ -1,0 +1,35 @@
+{
+    "name": "kalyani",
+    "description": "Music allow you to stream music trought the telegram voice chat feature.",
+    "keywords": ["Zaid", "Zaid-Vc-Player", "music", "voice chat", "telegram", "Yukki", "Yukki Music", "Private Music"],
+    "repository": "https://github.com/sakhaavvaavaj93/kalyani/tree/web",
+  "stack": "container",
+    "env": {
+        "STRING_SESSION": {
+            "description": "fill with the pyrogram session string from account",
+            "value": "BQC3EeilsfEVo_WvO7XPwGeEZ0EZXk602f7XgKAnOUxqwEx-NASLkot__UPt48xXf0x12Fs9F1RvNGe3PfL7xcGzl3rjasfcyuLjaZlIkf2rURvY3QKrlNOaC5msYkw3sYLrG60HaPdZRu61XAzBR1K0WPxnAHt0fPjibPG",
+            "required": true
+        },               
+        "API_ID": {
+            "description": "your Api ID from my.telegram.org/apps",
+            "required": true,
+            "value": "1701859"
+        },        
+        "API_HASH": {
+            "description": "your Api Hash from my.telegram.org/apps",
+            "required": false,
+            "value": "ebd582392a6d32290c7155925bee6d32"
+        },        
+        "DURATION_LIMIT": {
+            "description": "filled, don't change this !",
+            "required": true,
+            "value": "540000"
+        },       
+        "BOT_TOKEN": {
+            "description": "fill with your bot token get from @BotFather on telegram",
+            "required": true,
+            "value": "6096333459:AAHqBLMM0GVKhcJ5WA6BAywL8ILvYcwy_PY"
+        }
+
+    }
+        }
