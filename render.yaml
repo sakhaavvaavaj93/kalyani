@@ -1,8 +1,14 @@
-API_ID = int(getenv("API_ID", "1755145"))
-API_HASH = getenv("API_HASH", "f1933c5fb9c5c7b4fc1240ae36c809df")
-BOT_TOKEN = getenv("BOT_TOKEN", "5769340352:AAFZ6VqMeydqz_tuNHf9ykdOn4ap5IX2NQE")
-DURATION_LIMIT = int(getenv("DURATION_LIMIT", "1200"))
-STRING_SESSION = getenv("STRING_SESSION", "BQAayAkABvSPBBQlvfC0WDAZhtmtZpegKO71fTDLSBsX_zImgDOPIPzAFY8G3vA2Hkz038O7PDGqbLdWGmfMIcPWzZ0dKY78IB01cOrMq7pYQijE6Aqp4JhUgG49M4IoeAYaT0laQIFvyVqa8RYD72HzmIclYxUicCLrsN9WFo6xh37LQaLwTUPtFPbLBqdT049ZvJHDPgB6d5PSj1r7xrDAM1GRJXCjLoegztOAQjflTlTfkahSAFkdR5Y0B4b0eJoHjwQqEm0B7Ime7X8GXffSxDa1tXCwl2FyKM1Vsyn4rkkW5TLljbBSSJFTqbm8iejkrNKCZSSGSR2Qee1KsXMlaEFk_gAAAAFtw-lZAA")
-COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split()))
-aiohttpsession = aiohttp.ClientSession()
+services:
+  # A Docker web service
+  - type: web
+    name: webdis 
+    runtime: docker
+    repo: https://github.com/render-examples/webdis.git # optional
+    region: oregon # optional (defaults to oregon)
+    plan: standard # optional (defaults to starter instance type)
+    branch: master # optional (defaults to master)
+    rootDir: webdis
+    dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
+    numInstances: 3 # optional (defaults to 1)
+    healthCheckPath: /
+    
