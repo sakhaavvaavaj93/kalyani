@@ -26,6 +26,11 @@
 <p align="center"><a href="https://my.scalingo.com/deploy?template=https://github.com/sakhaavvaavaj93/kalyani/tree/master"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
 
 
+## 🚀 Okteto Deployment
+
+<h4>Click the button below to deploy on Okteto!</h4>
+<p align="center"><a href="https://cloud.okteto.com/deploy?repository=https://github.com/sakhaavvaavaj93/kalyani/tree/master"><img src="https://img.shields.io/badge/Deploy%20To%20Okteto-informational?style=for-the-badge&logo=Okteto" width="200""/></a>
+
 ### Get String Session
 
 [![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@AdityaHalder/StringSession)
