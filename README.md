@@ -21,6 +21,10 @@
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/sakhaavvaavaj93/kalyani)
 
+### Deploy to SCALINGO
+
+<p align="center"><a href="https://my.scalingo.com/deploy?template=https://github.com/sakhaavvaavaj93/kalyani/tree/web"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
+
 
 ### Get String Session
 
